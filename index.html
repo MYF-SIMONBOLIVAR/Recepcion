@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepción de Mercancía</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+
+</head>
+
+<body>
+
+    <!-- Overlay de carga -->
+    <div id="overlay">
+        <div id="spinner"></div>
+        <div id="checkmark">✔</div>
+        <div id="mensaje">Enviando...</div>
+    </div>
+
+    <div class="container">
+         <img src="logo.png" alt="Logo" class="logo">
+        <h1>Registro de Mercancía</h1>
+
+        <form id="registroForm">
+            <div class="form-group">
+                <label for="proveedor">Proveedor:</label>
+                <select id="proveedor" required>
+                    <option value="">Seleccione un proveedor</option>
+                    <!-- OPCIONES -->
+                   
+                    <option value="ABC DEL REMOLQUE SAS">ABC DEL REMOLQUE SAS</option>
+                    <option value="ACUMULADORES DUNCAN SAS">ACUMULADORES DUNCAN SAS</option>
+                    <option value="ANTIOQUEÑA DE LUBRICANTES SGP S.A.S">ANTIOQUEÑA DE LUBRICANTES SGP S.A.S</option>
+                    <option value="APLER DE COLOMBIA SAS">APLER DE COLOMBIA SAS</option>
+                    <option value="AUTOPARTES Y FRENOS DEL CARIBE S.A.S">AUTOPARTES Y FRENOS DEL CARIBE S.A.S</option>
+                    <option value="AUTOREPUESTOS Y CAMPANAS SAS">AUTOREPUESTOS Y CAMPANAS SAS</option>
+                    <option value="BIOINNOVA S.A.S">BIOINNOVA S.A.S</option>
+                    <option value="CALIREPUESTOS IMPORTADORES SAS">CALIREPUESTOS IMPORTADORES SAS</option>
+                    <option value="CAR PARTS S.A.S">CAR PARTS S.A.S</option>
+                    <option value="CARDENAS CLAVIJO EDWARD">CARDENAS CLAVIJO EDWARD</option>
+                    <option value="CASAMONTAÑA DE REPUESTOS S.A.S">CASAMONTAÑA DE REPUESTOS S.A.S</option>
+                    <option value="CAV AUTOMOTORES SAS">CAV AUTOMOTORES SAS</option>
+                    <option value="COEXITO S.A.S.">COEXITO S.A.S.</option>
+                    <option value="COMERCIAL INTERNACIONAL DE EQUIPOS Y MAQUINARIA S">COMERCIAL INTERNACIONAL DE EQUIPOS Y MAQUINARIA S</option>
+                    <option value="COMPAÑIA INTERNACIONAL DE AUTOPARTES SAS">COMPAÑIA INTERNACIONAL DE AUTOPARTES SAS</option>
+                    <option value="CP DIESSEL INTERNATIONAL S.A.S.">CP DIESSEL INTERNATIONAL S.A.S.</option>
+                    <option value="CUMMINS DE LOS ANDES S.A.">CUMMINS DE LOS ANDES S.A.</option>
+                    <option value="DCM DISTRICAUCHOS Y MANGUERAS S.A.S">DCM DISTRICAUCHOS Y MANGUERAS S.A.S</option>
+                    <option value="DFL SA">DFL SA</option>
+                    <option value="DIESEL INSTRUMENTS DE COLOMBIA S A S">DIESEL INSTRUMENTS DE COLOMBIA S A S</option>
+                    <option value="DIREGO COLOMBIA SAS">DIREGO COLOMBIA SAS</option>
+                    <option value="DISTRIBUCIONES SARCO SAS">DISTRIBUCIONES SARCO SAS</option>
+                    <option value="EL CIGUEÑAL MEDINA JARA S.A">EL CIGUEÑAL MEDINA JARA S.A</option>
+                    <option value="EMPAQUES Y REPUESTOS FAMIRDIESEL SAS">EMPAQUES Y REPUESTOS FAMIRDIESEL SAS</option>
+                    <option value="EMPAQUETADURAS Y EMPAQUES S.A">EMPAQUETADURAS Y EMPAQUES S.A</option>
+                    <option value="FERTRAC S.A.S">FERTRAC S.A.S</option>
+                    <option value="FUJIAN ZHENGXING INTELLIGENT TECHNOLOGY CO LTD">FUJIAN ZHENGXING INTELLIGENT TECHNOLOGY CO LTD</option>
+                    <option value="GT PARTS SAS">GT PARTS SAS</option>
+                    <option value="HEAVY MOGUL S.A.S.">HEAVY MOGUL S.A.S.</option>
+                    <option value="HEAVY PARTS COLOMBIA S. A. S.">HEAVY PARTS COLOMBIA S. A. S.</option>
+                    <option value="HERNANDEZ AGUILAR JUAN  GUILLERMO">HERNANDEZ AGUILAR JUAN GUILLERMO</option>
+                    <option value="IMPORTACIONES FADIR SAS">IMPORTACIONES FADIR SAS</option>
+                    <option value="IMPORTADORA GLOBAL REPUESTOS S.A.S">IMPORTADORA GLOBAL REPUESTOS S.A.S</option>
+                    <option value="IMPORTADORA LAS TRACTOMULAS SAS">IMPORTADORA LAS TRACTOMULAS SAS</option>
+                    <option value="IMPORTADORA REPARCOL SAS">IMPORTADORA REPARCOL SAS</option>
+                    <option value="IMPORTECH GROUP SAS">IMPORTECH GROUP SAS</option>
+                    <option value="INCOLBEST SA">INCOLBEST SA</option>
+                    <option value="INDUSTRIAS IVOR S A CASA INGLESA">INDUSTRIAS IVOR S A CASA INGLESA</option>
+                    <option value="INDUSTRIAS JB S.A.S">INDUSTRIAS JB S.A.S</option>
+                    <option value="INDUSTRIAS MAHER SAS">INDUSTRIAS MAHER SAS</option>
+                    <option value="INDUSTRIAS MONTES SAS">INDUSTRIAS MONTES SAS</option>
+                    <option value="INVERSIONES GARCIA OSORNO S.A">INVERSIONES GARCIA OSORNO S.A</option>
+                    <option value="JIMENEZ MARTINEZ SIGIFREDO">JIMENEZ MARTINEZ SIGIFREDO</option>
+                    <option value="LOPEZ SERNA LUIS CARLOS">LOPEZ SERNA LUIS CARLOS</option>
+                    <option value="MANGUERAS HIDR?ULICAS LYD S.A.S.">MANGUERAS HIDRÁULICAS LYD S.A.S.</option>
+                    <option value="MANGUERAS Y ACOPLES WSATEC S.A.S">MANGUERAS Y ACOPLES WSATEC S.A.S</option>
+                    <option value="MANGUERAS Y CORREAS DE ANTIOQUIA S.A.S">MANGUERAS Y CORREAS DE ANTIOQUIA S.A.S</option>
+                    <option value="MASTER PARTES S.A.S">MASTER PARTES S.A.S</option>
+                    <option value="MAX TRAILER SAS">MAX TRAILER SAS</option>
+                    <option value="MEGACOMERCIAL SAS">MEGACOMERCIAL SAS</option>
+                    <option value="MERTEL IMPORTACIONES SAS">MERTEL IMPORTACIONES SAS</option>
+                    <option value="MOLPARTES SAS">MOLPARTES SAS</option>
+                    <option value="MULTILUBES S.A.S.">MULTILUBES S.A.S.</option>
+                    <option value="MUNDIAL DE PARTES S.A.S">MUNDIAL DE PARTES S.A.S</option>
+                    <option value="MUNDIAL DE SUSPENSIONES SAS">MUNDIAL DE SUSPENSIONES SAS</option>
+                    <option value="RAMIREZ ECHEVERRI JAIME LEON">RAMIREZ ECHEVERRI JAIME LEON</option>
+                    <option value="RDV COLOMBIA S.A.S">RDV COLOMBIA S.A.S</option>
+                    <option value="RENOVAMOTOR S.A.S">RENOVAMOTOR S.A.S</option>
+                    <option value="RESORTES HERCULES S.A.S.">RESORTES HERCULES S.A.S.</option>
+                    <option value="RODAMUNDI SAS">RODAMUNDI SAS</option>
+                    <option value="ROJAS VARGAS LIBIA MARLENY">ROJAS VARGAS LIBIA MARLENY</option>
+                    <option value="SAFRENOS RANGEL S.A.S">SAFRENOS RANGEL S.A.S</option>
+                    <option value="SERRANO GOMEZ E HIJOS LTDA">SERRANO GOMEZ E HIJOS LTDA</option>
+                    <option value="SICOLSA DEL CENTRO SAS">SICOLSA DEL CENTRO SAS</option>
+                    <option value="SIMONIZ SA">SIMONIZ SA</option>
+                    <option value="SOLUTRA DE COLOMBIA LTDA">SOLUTRA DE COLOMBIA LTDA</option>
+                    <option value="SPEED TURBO COLOMBIA S.A.S">SPEED TURBO COLOMBIA S.A.S</option>
+                    <option value="TRACTOCHEVROLET LTDA">TRACTOCHEVROLET LTDA</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="factura">Número de Factura:</label>
+                <input type="text" id="factura" placeholder="Ej: F12345">
+            </div>
+
+            <div class="form-group">
+                <label for="ordenCompra">Número de Orden de Compra:</label>
+                <input type="text" id="ordenCompra" placeholder="Ej: OC98765">
+            </div>
+
+            <div class="form-group">
+                <label for="fechaHora">Fecha y Hora de Llegada:</label>
+                <input type="text" id="fechaHora" readonly>
+            </div>
+
+            <button type="submit">Registrar Entrada</button>
+            <div id="mensajeForm" class="mensaje"></div>
+        </form>
+    </div>
+
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwHUe0gY5twzuX7CUa5Tfq72XbDrHjT8NK2DxLHKKc8_eOfLNVYPraYDeMqZgNIVgR-7Q/exec";
+
+        // Fecha y hora automática
+        document.getElementById("fechaHora").value = new Date().toLocaleString();
+
+        document.getElementById("registroForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const proveedor = document.getElementById("proveedor").value;
+            if (!proveedor) {
+                alert("Por favor seleccione un proveedor.");
+                return;
+            }
+
+            const data = {
+                proveedor: proveedor,
+                factura: document.getElementById("factura").value,
+                ordenCompra: document.getElementById("ordenCompra").value,
+                fechaHora: document.getElementById("fechaHora").value
+            };
+
+            // Elementos del overlay
+            const overlay = document.getElementById("overlay");
+            const spinner = document.getElementById("spinner");
+            const checkmark = document.getElementById("checkmark");
+            const mensaje = document.getElementById("mensaje");
+
+            overlay.classList.add("show");
+            spinner.style.display = "block";
+            checkmark.style.display = "none";
+            mensaje.textContent = "Enviando registro...";
+
+            try {
+                const formData = new FormData();
+                formData.append("proveedor", data.proveedor);
+                formData.append("factura", data.factura);
+                formData.append("ordenCompra", data.ordenCompra);
+                formData.append("fechaHora", data.fechaHora);
+
+                await fetch(scriptURL, {
+                    method: "POST",
+                    body: formData
+                });
+
+                spinner.style.display = "none";
+                checkmark.style.display = "block";
+                mensaje.textContent = "Registro enviado correctamente";
+
+                setTimeout(() => {
+                    overlay.classList.remove("show");
+                    document.getElementById("registroForm").reset();
+                    document.getElementById("fechaHora").value = new Date().toLocaleString();
+                }, 2500);
+
+            } catch (error) {
+                overlay.classList.remove("show");
+                alert("Error al enviar: " + error.message);
+            }
+        });
+    </script>
+
+</body>
+</html>

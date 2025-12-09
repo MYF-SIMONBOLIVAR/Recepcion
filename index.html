@@ -102,7 +102,7 @@
 
             <div class="form-group">
                 <label for="factura">Número de Factura:</label>
-                <input type="text" id="factura" placeholder="Ej: F12345">
+                <input type="text" id="factura" placeholder="Ej: FRBT240220">
             </div>
 
             <div class="form-group">
@@ -111,8 +111,13 @@
             </div>
 
             <div class="form-group">
+                <label for="guia">Número de Guia:</label>
+                <input type="text" id="guia" placeholder="Ej: 098000056222">
+            </div>
+
+            <div class="form-group">
                 <label for="fechaHora">Fecha y Hora de Llegada:</label>
-                <input type="text" id="fechaHora" readonly>
+                <input type="datetime-local" id="fechaHora" required>
             </div>
 
             <button type="submit">Registrar Entrada</button>
@@ -121,7 +126,7 @@
     </div>
 
     <script>
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwHUe0gY5twzuX7CUa5Tfq72XbDrHjT8NK2DxLHKKc8_eOfLNVYPraYDeMqZgNIVgR-7Q/exec";
+        const scriptURL = "https://script.google.com/macros/s/AKfycby83hWNaNGIlQ2GzCxC_a0ufjCPB2bKYGXr12XYUlUYZx9F9Yxpn0Ba_URhzppJ4IME0A/exec";
 
         // Fecha y hora automática
         document.getElementById("fechaHora").value = new Date().toLocaleString();
@@ -139,6 +144,7 @@
                 proveedor: proveedor,
                 factura: document.getElementById("factura").value,
                 ordenCompra: document.getElementById("ordenCompra").value,
+                Guia:document.getElementById("guia").value,
                 fechaHora: document.getElementById("fechaHora").value
             };
 
@@ -152,12 +158,14 @@
             spinner.style.display = "block";
             checkmark.style.display = "none";
             mensaje.textContent = "Enviando registro...";
+            
 
             try {
                 const formData = new FormData();
                 formData.append("proveedor", data.proveedor);
                 formData.append("factura", data.factura);
                 formData.append("ordenCompra", data.ordenCompra);
+                formData.append("guia", data.Guia);
                 formData.append("fechaHora", data.fechaHora);
 
                 await fetch(scriptURL, {
@@ -184,3 +192,4 @@
 
 </body>
 </html>
+
